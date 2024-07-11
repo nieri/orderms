@@ -1,4 +1,4 @@
-package tech.mnieri.hobbitmq.consumer.orderms.entity;
+package tech.mnieri.rabbitmq.consumer.orderms.entity;
 
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;

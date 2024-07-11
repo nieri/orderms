@@ -1,4 +1,4 @@
-package tech.mnieri.hobbitmq.consumer.orderms.config;
+package tech.mnieri.rabbitmq.consumer.orderms.config;
 
 import org.springframework.context.annotation.Configuration;
 

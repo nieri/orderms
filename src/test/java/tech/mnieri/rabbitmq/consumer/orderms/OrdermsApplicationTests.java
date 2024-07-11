@@ -1,4 +1,4 @@
-package tech.mnieri.hobbitmq.consumer.orderms;
+package tech.mnieri.rabbitmq.consumer.orderms;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

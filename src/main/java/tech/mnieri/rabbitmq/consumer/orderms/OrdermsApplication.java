@@ -1,4 +1,4 @@
-package tech.mnieri.hobbitmq.consumer.orderms;
+package tech.mnieri.rabbitmq.consumer.orderms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
