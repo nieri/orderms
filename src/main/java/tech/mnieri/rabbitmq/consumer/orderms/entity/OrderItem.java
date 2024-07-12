@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 public class OrderItem {
 
-    private String Product;
+    private String product;
 
     private Integer quantity;
 
@@ -18,17 +18,17 @@ public class OrderItem {
     }
 
     public OrderItem(String product, Integer quantity, BigDecimal price) {
-        Product = product;
+        this.product = product;
         this.quantity = quantity;
         this.price = price;
     }
 
     public String getProduct() {
-        return Product;
+        return product;
     }
 
     public void setProduct(String product) {
-        Product = product;
+        this.product = product;
     }
 
     public Integer getQuantity() {
