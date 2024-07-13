@@ -11,6 +11,8 @@ import tech.mnieri.rabbitmq.consumer.orderms.controller.dto.ApiResponse;
 import tech.mnieri.rabbitmq.consumer.orderms.controller.dto.PaginationResponse;
 import tech.mnieri.rabbitmq.consumer.orderms.service.OrderService;
 
+import java.util.Map;
+
 @RestController
 public class OrderController {
 
@@ -23,11 +25,13 @@ public class OrderController {
     @GetMapping("/customers/{customerId}/orders")
     public ResponseEntity<ApiResponse<OrderResponse>> listOrders(@PathVariable("customerId") Long customerId,
                                                                  @RequestParam(name = "page", defaultValue = "0") Integer page,
-                                                                 @RequestParam(name = "pageSize", defaultValue = "10") Integer pageSize){
+                                                                 @RequestParam(name = "pageSize", defaultValue = "10") Integer pageSize) {
 
         var pageResponse = service.findAllByCustomerId(customerId, PageRequest.of(page, pageSize));
+        var totalOnOrders = service.findTotalOnOrdersByCustomerId(customerId);
 
         return ResponseEntity.ok(new ApiResponse(
+                        Map.of("totalOnOrders", totalOnOrders),
                         pageResponse.getContent(),
                         PaginationResponse.fromPage(pageResponse)
                 )

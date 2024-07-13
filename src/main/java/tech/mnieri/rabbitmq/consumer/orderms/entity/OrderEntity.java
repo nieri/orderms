@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 import java.math.BigDecimal;
 import java.util.List;
 
-@Document(collection = "tb-orders")
+@Document(collection = "tb_orders")
 public class OrderEntity {
 
     @MongoId
